@@ -1,16 +1,23 @@
-﻿using System;
+using System;
+using System.Linq;
 using System.Runtime.Serialization.Formatters;
 
 namespace Task_3
 {
     class Program
     {
+        public static string Text(string item)
+        {
+            if (item.All(i => ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z') || i == ' '))) return item;
+            Console.WriteLine("In your string there is words with numbers.It's uncorrect.Or are you using non-English symbols.This is forbidden.Try Again!!!");
+            return "0";
+        }
         static void Main(string[] args)
         {  
             string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVQXYZA";
             string alphabet = ALPHABET.ToLower();
             string glasn = "aeijouy";
-            string[] a = Console.ReadLine().Split();
+            string[] a = Text(Console.ReadLine()).Split();
             string[] ans = new string[a.Length]; // конечная строка с исправленными буквами 
              for(int k = 0; k < a.Length; k++)
             {
