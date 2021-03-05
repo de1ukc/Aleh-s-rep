@@ -1,13 +1,21 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
+using System.Linq;
 using Microsoft.Win32;
 
 namespace task1
 { 
     class Program
-    {  static long binpow(long a, long n)
+    {   public static string Number(string item)
+        {
+            if (item.All(i => i <= '9' && i >= '.' && i != '/')) return item;
+            Console.WriteLine("It is not a number.Now the answer is not correct.Try again laser brain!!!");
+            Environment.Exit(0);
+            return "0";
+        }
+        static long binpow(long a, long n)
         {
             long res = 1;
             while (n > 0)
@@ -27,14 +35,19 @@ namespace task1
               }
             return stepen;
         }
-
         static void Main(string[] args)
         {   Console.WriteLine("Введите число a :");
-            long a = int.Parse(Console.ReadLine());
-           Console.WriteLine("Введите число b :");
-            long b = int.Parse(Console.ReadLine());
-            long ans = res(b) - res (a-1) ;
-           Console.WriteLine(ans);
+            long a = long.Parse(Number(Console.ReadLine()));
+            Console.WriteLine("Введите число b :");
+            long b = long.Parse(Number(Console.ReadLine()));
+            long ans = 0;
+            if (b > a) { ans = res(b) - res (a-1) ; }
+           else
+           {
+               if (a > b) {  ans = res(a) - res (b-1) ; }
+               if (a==b) { Console.WriteLine("You've entered the same numbers.You are a bold one "); }
+           }
+            Console.WriteLine($"Максимальная степень двойки равна {ans}");
         }
     }
 } 
