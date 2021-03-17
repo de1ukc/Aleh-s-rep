@@ -1,0 +1,9 @@
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\bin\Debug\net472\MyStudents.exe.config
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\bin\Debug\net472\MyStudents.exe
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\bin\Debug\net472\MyStudents.pdb
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.csprojAssemblyReference.cache
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.AssemblyInfoInputs.cache
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.AssemblyInfo.cs
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.csproj.CoreCompileInputs.cache
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.exe
+D:\Rider_LABS\LAB_3&5\MyStudents\MyStudents\obj\Debug\net472\MyStudents.pdb
