@@ -1,24 +1,22 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace MyStudents
 {
     enum MyEnum : int 
     { Sleep = 1,
-        ShortSleep = 2,
-        GYM = 3,
-        Doctor = 4,
-        Dota = 5,
-        skil_classes = 6,
-        MMA = 7,
-        went = 8,
-        info = 9,
+        ShortSleep ,
+        GYM ,
+        Doctor ,
+        Dota ,
+        skil_classes ,
+        MMA ,
+        went ,
+        info ,
         exit = 0
     }
     class Human
-    { 
-        
-        
+    {
         protected int HP;//очки здоровья
         protected int AP;//очки действия 
         protected int Power;//очки силы
@@ -31,7 +29,6 @@ namespace MyStudents
             this.HP = HP;
             this.AP= AP;
             this.Power = Power;
-
         }
 
        public void info()
@@ -93,7 +90,6 @@ namespace MyStudents
 
        public void GYM()
        {
-
            if (this.HP <= 5)
            { Console.WriteLine("I'm sick, I need to heal first before I go to the GUM bosses");
            }
@@ -117,7 +113,6 @@ namespace MyStudents
                    Console.WriteLine(
                        $"You found Master of the GYM and worked out.Your Power now is increased to {this.Power}");
                }
-
                if (this.AP == 10)
                {
                    this.AP -= 3;
@@ -129,7 +124,6 @@ namespace MyStudents
 
                    Console.WriteLine($"UNLIMITED POWEEER.\n Your Power now is increased to {this.Power}");
                }
-
                Random oh = new Random();
                int a = oh.Next(100);
                if (a == 100)
@@ -137,15 +131,11 @@ namespace MyStudents
                    this.HP--;
                    Console.WriteLine($"you are injured, you should go to the doctor, your HP is now equal {this.HP}");
                }
-
                if (this.Power == 10)
                {Console.WriteLine("I'm too strong and powerful , now i can everything.");
                }
-
            }
-
        }
-
        public void Doctor()
        {
            if (this.HP == 10)
@@ -189,9 +179,7 @@ namespace MyStudents
                }
            }
        }
-
     }
-
     class Student : Human
     {
         protected int knowledge;// max 100 
@@ -222,7 +210,6 @@ namespace MyStudents
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
         }
-        
     }
 
     class Studentofspezialisation : Student
@@ -240,7 +227,6 @@ namespace MyStudents
             else
             {
                 this.AP -= 2;
-
                 Console.WriteLine(
                     "Congratulations, you attended the lecture on MMA and you were not even crossed out by Anisimov," +
                     " i hope you at least understood something ");
@@ -250,7 +236,6 @@ namespace MyStudents
                     this.knowledge = 100;
                 }
             }
-
         }
         public void info() 
         { Console.WriteLine($"Name : {firstname}");
@@ -264,7 +249,6 @@ namespace MyStudents
             Console.WriteLine($"group : {this.group}");
             Console.WriteLine($"Spezialisation : {this.Spezialisation}");
         }
-
         public void DOTA2()
         {   
             if (this.AP < 2)
@@ -276,10 +260,7 @@ namespace MyStudents
                 this.AP--;
             }
         }
-
-
     }
-
     class Program
     {   public static bool Word(string item)
         {
@@ -335,7 +316,6 @@ namespace MyStudents
             //////////////////////////////////////////////////////////////////
             while (true)
             { me.isalive();
-                
                 switch (me.Menu())
                 { case (int)MyEnum.Sleep        : me.Sleep(8); break;
                   case (int)MyEnum.ShortSleep   : me.Sleep(); break;
