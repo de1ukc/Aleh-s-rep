@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace MyStudents
 {
-    enum MyEnum : int 
+    enum MyEnum 
     { Sleep = 1,
         ShortSleep ,
         GYM ,
@@ -152,7 +152,15 @@ namespace MyStudents
            Random woops = new Random();
            int b = woops.Next(50);
            if (b == 27 )
-           { this.HP -= 4;Console.WriteLine($"Woops you got even more ill in the hospital, your HP : {this.HP}");}
+           { this.HP -= 4;
+               if (this.HP <= 0)
+               {
+                   this.HP = 0; Console.WriteLine("YOU DIE"); Environment.Exit(0); 
+
+               }
+               Console.WriteLine($"Woops you got even more ill in the hospital, your HP : {this.HP}");
+               
+           }
        }
 
        public void Work()
@@ -175,7 +183,12 @@ namespace MyStudents
                else
                { Console.WriteLine("I love to walk , the city is wonderful");
                    this.HP++;
+                   if (this.HP > 10) { this.HP = 10;}
                    this.AP--;
+                   if (this.AP <= 0)
+                   {
+                       this.AP = 0;
+                   }
                }
            }
        }
