@@ -14,8 +14,8 @@ namespace MyStudents
         went ,
         info ,
         exit = 0
-    } 
-    
+    }
+   
     class Human
     {
         protected int HP;//очки здоровья
@@ -72,6 +72,7 @@ namespace MyStudents
        Console.WriteLine("\n");
        return i;
        }
+       
        public void Sleep(int a) // += 4
        {
            this.AP += 4;
@@ -79,6 +80,7 @@ namespace MyStudents
            Console.WriteLine($"You've been asleep all night,{a} hours.Your AP now is {this.AP}");
        
        }
+       
        public void Sleep() // rand
        {
            var random = new Random();
@@ -89,6 +91,7 @@ namespace MyStudents
                           $" It seems better not to do so. Your AP has increased to {this.AP} points.");
            
        }
+       
        public void GYM()
        {
            if (this.HP <= 5)
@@ -137,6 +140,7 @@ namespace MyStudents
                }
            }
        }
+       
        public void Doctor()
        {
            if (this.HP == 10)
@@ -169,6 +173,7 @@ namespace MyStudents
                this.AP -= 2;
            }
        }
+       
        public void Goingwent()
        {
            if (this.HP < 5)
@@ -204,11 +209,14 @@ namespace MyStudents
                 retaking++;
             }
         }
+        
         public Student(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power)
         {
             this.knowledge = knowledge;
         }
+        
         public string group;
+        
         public void Fuckingaround()
         {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
             this.AP -= 2;
@@ -247,6 +255,7 @@ namespace MyStudents
         {
             this.knowledge = knowledge;
         }
+        
         public void MMALection()
         {
             if (this.AP < 4 )
@@ -277,6 +286,7 @@ namespace MyStudents
             Console.WriteLine($"group : {this.group}");
             Console.WriteLine($"Spezialisation : {this.spezialisation}");
         }
+        
         public void DOTA2()
         {   
             if (this.AP < 2)
@@ -295,11 +305,13 @@ namespace MyStudents
             if (item.All(i => ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z')))) return false;
             return true;
         }
+        
         public static string Number(string item)
         {
             if (item.All(i => i <= '9' && i >= '.' && i != '/')) return item;
             return "0";
         }
+        
         
         static void Main(string[] args)
         {
