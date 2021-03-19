@@ -15,6 +15,7 @@ namespace MyStudents
         info ,
         exit = 0
     } 
+    
     class Human
     {
         protected int HP;//очки здоровья
@@ -41,6 +42,7 @@ namespace MyStudents
          Console.WriteLine($"AP: {AP}");
          Console.WriteLine($"Power: {power}");
         }
+        
        public void Isalive()
        {
                 if (this.HP == 0)
@@ -241,7 +243,7 @@ namespace MyStudents
     class Studentofspezialisation : Student
     {
         public string spezialisation;
-        public Studentofspezialisation(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power, knowledge)
+        public Studentofspezialisation(int HP, int AP, int power, int knowledge) : base(HP, AP, power, knowledge)
         {
             this.knowledge = knowledge;
         }
@@ -298,6 +300,7 @@ namespace MyStudents
             if (item.All(i => i <= '9' && i >= '.' && i != '/')) return item;
             return "0";
         }
+        
         static void Main(string[] args)
         {
             Studentofspezialisation me = new Studentofspezialisation(8,10,5, 70 );
