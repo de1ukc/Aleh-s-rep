@@ -80,18 +80,23 @@ namespace MyStudents
            Console.WriteLine($"You've been asleep all night,{a} hours.Your AP now is {this.AP}");
        
        }
-       
+
        public void Sleep() // rand
        {
            var random = new Random();
            int a = random.Next(1, 6);
            this.AP += a;
-           if (this.AP > 10) { this.AP = 10; }
-           Console.WriteLine("You went to bed in the afternoon, it is not known at what time of the year and era you woke up." +
-                          $" It seems better not to do so. Your AP has increased to {this.AP} points.");
-           
+           if (this.AP > 10)
+           {
+               this.AP = 10;
+           }
+
+           Console.WriteLine(
+               "You went to bed in the afternoon, it is not known at what time of the year and era you woke up." +
+               $" It seems better not to do so. Your AP has increased to {this.AP} points.");
+
        }
-       
+
        public void GYM()
        {
            if (this.HP <= 5)
@@ -197,6 +202,7 @@ namespace MyStudents
            }
        }
     }
+    
     class Student : Human
     {
         protected int knowledge;// max 100 
@@ -248,6 +254,7 @@ namespace MyStudents
             Console.WriteLine($"group : {this.group}");
         }
     }
+    
     class Studentofspezialisation : Student
     {
         public string spezialisation;
@@ -299,6 +306,7 @@ namespace MyStudents
             }
         }
     }
+    
     class Program
     {   public static bool Word(string item)
         {
