@@ -87,7 +87,6 @@ namespace MyStudents
                           $" It seems better not to do so. Your AP has increased to {this.AP} points.");
            
        }
-
        public void GYM()
        {
            if (this.HP <= 5)
@@ -196,7 +195,16 @@ namespace MyStudents
     class Student : Human
     {
         protected int knowledge;// max 100 
-        protected static int retaking; // количество пересдач у всех студентов 
+        protected static int retaking = 0 ; // количество пересдач у всех студентов
+
+        public static void retek(Student a)
+        {
+            if (a.knowledge < 20)
+            { Console.WriteLine("you've missed to much lectures , you will have retaken");
+                retaking++;
+            }
+        }
+
         public Student(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power)
         {
             this.knowledge= knowledge;
@@ -205,11 +213,19 @@ namespace MyStudents
         public void fuckingaround()
         {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
             this.AP -= 2;
-            this.knowledge -= 4;
-            if (this.knowledge < 0)
+            if (this.AP <= 0)
             {
-                this.knowledge = 0;
-                Console.WriteLine("I guess that you don't pass the session");
+                this.AP = 0; 
+                Console.WriteLine("Oh, you are to bord, you can't go to walk");
+            }
+            else
+            {
+                this.knowledge -= 4;
+                if (this.knowledge < 0)
+                {
+                    this.knowledge = 0;
+                    Console.WriteLine("I guess that you don't pass the session");
+                }
             }
         }
         public void info() 
@@ -329,6 +345,7 @@ namespace MyStudents
             //////////////////////////////////////////////////////////////////
             while (true)
             { me.isalive();
+                Student.retek(me);
                 switch (me.Menu())
                 { case (int)MyEnum.Sleep        : me.Sleep(8); break;
                   case (int)MyEnum.ShortSleep   : me.Sleep(); break;
