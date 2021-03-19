@@ -51,27 +51,27 @@ namespace MyStudents
 
        public int Menu()
        { 
-       Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
-       Console.WriteLine("1.Get some sleep");
-       Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
-       Console.WriteLine("3.Go to the GYM to your Dungeon Master");
-       Console.WriteLine("4.Go to the doctor");
-       Console.WriteLine("5.Games");
-       Console.WriteLine("6.You can fucking aroud somewhere");
-       Console.WriteLine("7.You can visit MMA lecture");
-       Console.WriteLine("8.You can go went ");
-       Console.WriteLine("9.Info");
-       Console.WriteLine("0.I want to finish this stupid life.");
-       Console.WriteLine("Enter your choice as a number please");
-       int i = Int32.Parse(Program.Number(Console.ReadLine()));
-       while (i > 9 || i < 0)
-       { 
-           Console.WriteLine("I know that you've lide. Please enter again :");
-           i = Int32.Parse(Program.Number(Console.ReadLine()));
-       }
-       Console.WriteLine("\n");
-       return i;
-       }
+           Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
+           Console.WriteLine("1.Get some sleep");
+           Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
+           Console.WriteLine("3.Go to the GYM to your Dungeon Master");
+           Console.WriteLine("4.Go to the doctor");
+           Console.WriteLine("5.Games");
+           Console.WriteLine("6.You can fucking aroud somewhere");
+           Console.WriteLine("7.You can visit MMA lecture");
+           Console.WriteLine("8.You can go went ");
+           Console.WriteLine("9.Info");
+           Console.WriteLine("0.I want to finish this stupid life.");
+           Console.WriteLine("Enter your choice as a number please");
+           int i = Int32.Parse(Program.Number(Console.ReadLine()));
+           while (i > 9 || i < 0)
+           { 
+               Console.WriteLine("I know that you've lide. Please enter again :");
+               i = Int32.Parse(Program.Number(Console.ReadLine()));
+           }
+           Console.WriteLine("\n");
+           return i;
+           }
        
        public void Sleep(int a) // += 4
        {
@@ -246,7 +246,8 @@ namespace MyStudents
         }
         
         public void Info() 
-        {   Console.WriteLine($"Name : {firstname}");
+        {   
+            Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -261,6 +262,7 @@ namespace MyStudents
     class Studentofspezialisation : Student
     {
         public string spezialisation;
+        
         public Studentofspezialisation(int HP, int AP, int power, int knowledge) : base(HP, AP, power, knowledge)
         {
             this.knowledge = knowledge;
@@ -286,7 +288,8 @@ namespace MyStudents
             }
         }
         public void Info() 
-        {   Console.WriteLine($"Name : {firstname}");
+        {   
+            Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -324,8 +327,7 @@ namespace MyStudents
             if (item.All(i => i <= '9' && i >= '.' && i != '/')) return item;
             return "0";
         }
-        
-        
+       
         static void Main(string[] args)
         {
             Studentofspezialisation me = new Studentofspezialisation(8,10,5, 70 );
