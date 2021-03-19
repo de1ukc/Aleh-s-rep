@@ -149,7 +149,8 @@ namespace MyStudents
        public void Doctor()
        {
            if (this.HP == 10)
-           { Console.WriteLine("you are healthy, you do not need treatment");
+           { 
+               Console.WriteLine("you are healthy, you do not need treatment");
            }
 
            if (this.HP != 10)
@@ -182,7 +183,8 @@ namespace MyStudents
        public void Goingwent()
        {
            if (this.HP < 5)
-           {Console.WriteLine("It's better stay home. I'm sick");
+           {
+               Console.WriteLine("It's better stay home. I'm sick");
            }
            else
            {
@@ -211,7 +213,8 @@ namespace MyStudents
         public static void Retek(Student a)
         {
             if (a.knowledge < 20)
-            { Console.WriteLine("you've missed to much lectures , you will have retaken");
+            { 
+                Console.WriteLine("you've missed to much lectures , you will have retaken");
                 retaking++;
             }
         }
@@ -243,7 +246,7 @@ namespace MyStudents
         }
         
         public void Info() 
-        { Console.WriteLine($"Name : {firstname}");
+        {   Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -266,7 +269,8 @@ namespace MyStudents
         public void MMALection()
         {
             if (this.AP < 4 )
-            { Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
+            { 
+               Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
             }
             else
             {
@@ -282,7 +286,7 @@ namespace MyStudents
             }
         }
         public void Info() 
-        { Console.WriteLine($"Name : {firstname}");
+        {   Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -297,7 +301,8 @@ namespace MyStudents
         public void DOTA2()
         {   
             if (this.AP < 2)
-            { Console.WriteLine("OOh , i'm too tired ");
+            {
+              Console.WriteLine("OOh , i'm too tired ");
             }
             else
             {
