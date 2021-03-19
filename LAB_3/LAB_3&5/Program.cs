@@ -9,47 +9,47 @@ namespace MyStudents
         GYM ,
         Doctor ,
         Dota ,
-        skil_classes ,
+        skip_classes ,
         MMA ,
         went ,
         info ,
         exit = 0
-    }
+    } 
     class Human
     {
         protected int HP;//очки здоровья
         protected int AP;//очки действия 
-        protected int Power;//очки силы
+        protected int power;//очки силы
         public string firstname;
         public string secondname;
         public string lastname;
         public int age;
-        public Human(int HP, int AP, int Power)
+        public Human(int HP, int AP, int power)
         {
             this.HP = HP;
             this.AP= AP;
-            this.Power = Power;
+            this.power = power;
         }
 
-       public void info()
-       { Console.WriteLine($"Name : {firstname}");
+       public void Info()
+       { 
+         Console.WriteLine($"Name : {firstname}");
          Console.WriteLine($"Secondname : {secondname}");
          Console.WriteLine($"Lastname : {lastname}");
          Console.WriteLine($"Age : {age}");
          Console.WriteLine($"HP: {HP}");
          Console.WriteLine($"AP: {AP}");
-         Console.WriteLine($"Power: {Power}");
+         Console.WriteLine($"Power: {power}");
         }
-
-       public void isalive()
+       public void Isalive()
        {
                 if (this.HP == 0)
-                {Console.WriteLine("YOU DIE"); Environment.Exit(0); }
+                {Console.WriteLine("YOU DIED"); Environment.Exit(0); }
        }
 
        public int Menu()
-       { Console.WriteLine("\n");
-           Console.WriteLine("Well, we can do some shit, what are we gonna do?");
+       { 
+       Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
        Console.WriteLine("1.Get some sleep");
        Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
        Console.WriteLine("3.Go to the GYM to your Dungeon Master");
@@ -63,20 +63,20 @@ namespace MyStudents
        Console.WriteLine("Enter your choice as a number please");
        int i = Int32.Parse(Program.Number(Console.ReadLine()));
        while (i > 9 || i < 0)
-       { Console.WriteLine("I know that you've lide. Please enter again :");
+       { 
+           Console.WriteLine("I know that you've lide. Please enter again :");
            i = Int32.Parse(Program.Number(Console.ReadLine()));
        }
        Console.WriteLine("\n");
        return i;
        }
-
        public void Sleep(int a) // += 4
        {
            this.AP += 4;
            if (this.AP >= 10) { this.AP = 10;}
-       Console.WriteLine($"You've been asleep all night,{a} hours.Your AP now is {this.AP}");
+           Console.WriteLine($"You've been asleep all night,{a} hours.Your AP now is {this.AP}");
+       
        }
-
        public void Sleep() // rand
        {
            var random = new Random();
@@ -101,27 +101,27 @@ namespace MyStudents
 
                if (this.AP > 4 && this.AP < 10)
                {
-                   this.Power++;
+                   this.power++;
                    this.AP -= 2;
-                   if (this.Power > 10)
+                   if (this.power > 10)
                    {
-                       this.Power = 10;
+                       this.power = 10;
                        Console.WriteLine("Wow , you are dungen master.");
                    }
 
                    Console.WriteLine(
-                       $"You found Master of the GYM and worked out.Your Power now is increased to {this.Power}");
+                       $"You found Master of the GYM and worked out.Your Power now is increased to {this.power}");
                }
                if (this.AP == 10)
                {
                    this.AP -= 3;
-                   this.Power += 2;
-                   if (this.Power > 10)
+                   this.power += 2;
+                   if (this.power > 10)
                    {
-                       this.Power = 10;
+                       this.power = 10;
                    }
 
-                   Console.WriteLine($"UNLIMITED POWEEER.\n Your Power now is increased to {this.Power}");
+                   Console.WriteLine($"UNLIMITED POWEEER.\n Your Power now is increased to {this.power}");
                }
                Random oh = new Random();
                int a = oh.Next(100);
@@ -130,7 +130,7 @@ namespace MyStudents
                    this.HP--;
                    Console.WriteLine($"you are injured, you should go to the doctor, your HP is now equal {this.HP}");
                }
-               if (this.Power == 10)
+               if (this.power == 10)
                {Console.WriteLine("I'm too strong and powerful , now i can everything.");
                }
            }
@@ -154,11 +154,9 @@ namespace MyStudents
            { this.HP -= 4;
                if (this.HP <= 0)
                {
-                   this.HP = 0; Console.WriteLine("YOU DIE"); Environment.Exit(0); 
-
+                   this.HP = 0; Console.WriteLine("YOU DIE"); Environment.Exit(0);
                }
                Console.WriteLine($"Woops you got even more ill in the hospital, your HP : {this.HP}");
-               
            }
        }
 
@@ -169,7 +167,7 @@ namespace MyStudents
                this.AP -= 2;
            }
        }
-       public void goingwent()
+       public void Goingwent()
        {
            if (this.HP < 5)
            {Console.WriteLine("It's better stay home. I'm sick");
@@ -197,20 +195,19 @@ namespace MyStudents
         protected int knowledge;// max 100 
         protected static int retaking = 0 ; // количество пересдач у всех студентов
 
-        public static void retek(Student a)
+        public static void Retek(Student a)
         {
             if (a.knowledge < 20)
             { Console.WriteLine("you've missed to much lectures , you will have retaken");
                 retaking++;
             }
         }
-
         public Student(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power)
         {
-            this.knowledge= knowledge;
+            this.knowledge = knowledge;
         }
         public string group;
-        public void fuckingaround()
+        public void Fuckingaround()
         {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
             this.AP -= 2;
             if (this.AP <= 0)
@@ -228,22 +225,22 @@ namespace MyStudents
                 }
             }
         }
-        public void info() 
+        
+        public void Info() 
         { Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
             Console.WriteLine($"HP: {HP}");
             Console.WriteLine($"AP: {AP}");
-            Console.WriteLine($"Power: {Power}");
+            Console.WriteLine($"Power: {power}");
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
         }
     }
-
     class Studentofspezialisation : Student
     {
-        public string Spezialisation;
+        public string spezialisation;
         public Studentofspezialisation(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power, knowledge)
         {
             this.knowledge = knowledge;
@@ -266,17 +263,17 @@ namespace MyStudents
                 }
             }
         }
-        public void info() 
+        public void Info() 
         { Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
             Console.WriteLine($"HP: {HP}");
             Console.WriteLine($"AP: {AP}");
-            Console.WriteLine($"Power: {Power}");
+            Console.WriteLine($"Power: {power}");
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
-            Console.WriteLine($"Spezialisation : {this.Spezialisation}");
+            Console.WriteLine($"Spezialisation : {this.spezialisation}");
         }
         public void DOTA2()
         {   
@@ -341,28 +338,27 @@ namespace MyStudents
             {Console.WriteLine("Please, write your group correctly:");
                 me.group = Console.ReadLine();
             }
-
             //////////////////////////////////////////////////////////////////
             Console.WriteLine("Enter your spezialisation:");
-            me.Spezialisation= Console.ReadLine();
-            while (Word(me.Spezialisation) || me.Spezialisation == "")
+            me.spezialisation= Console.ReadLine();
+            while (Word(me.spezialisation) || me.spezialisation == "")
             { Console.WriteLine("You are liar.Enter your spezialisation correctly : ");
-                me.Spezialisation = Console.ReadLine();
+                me.spezialisation = Console.ReadLine();
             }
             //////////////////////////////////////////////////////////////////
             while (true)
-            { me.isalive();
-                Student.retek(me);
+            { me.Isalive();
+                Student.Retek(me);
                 switch (me.Menu())
                 { case (int)MyEnum.Sleep        : me.Sleep(8); break;
                   case (int)MyEnum.ShortSleep   : me.Sleep(); break;
                   case (int)MyEnum.GYM          : me.GYM(); break;
                   case (int)MyEnum.Doctor       : me.Doctor(); break;
                   case (int)MyEnum.Dota         : me.DOTA2();break;
-                  case (int)MyEnum.skil_classes : me.fuckingaround();break;
+                  case (int)MyEnum.skip_classes : me.Fuckingaround();break;
                   case (int)MyEnum.MMA          : me.MMALection();break;
-                  case (int)MyEnum.went         : me.goingwent();break;
-                  case (int)MyEnum.info         : me.info(); break;
+                  case (int)MyEnum.went         : me.Goingwent();break;
+                  case (int)MyEnum.info         : me.Info(); break;
                   case (int)MyEnum.exit         : Console.WriteLine("GAME OVER");  Environment.Exit(0);break;
                   default                  : Console.WriteLine("I swear to God, I do not know how you break this validation. " +
                                              "If it succeeded, it is not worth playing it, it is worth going to hackers."); break;
