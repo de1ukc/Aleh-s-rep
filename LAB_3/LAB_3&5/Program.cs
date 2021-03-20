@@ -1,9 +1,11 @@
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 namespace MyStudents
 {
-    enum MyEnum 
+    public enum MyEnum : int 
     { Sleep = 1,
         ShortSleep ,
         GYM ,
@@ -15,7 +17,8 @@ namespace MyStudents
         info ,
         exit = 0
     }
-   
+
+
     class Human
     {
         protected int HP;//очки здоровья
@@ -51,27 +54,27 @@ namespace MyStudents
 
        public int Menu()
        { 
-           Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
-           Console.WriteLine("1.Get some sleep");
-           Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
-           Console.WriteLine("3.Go to the GYM to your Dungeon Master");
-           Console.WriteLine("4.Go to the doctor");
-           Console.WriteLine("5.Games");
-           Console.WriteLine("6.You can fucking aroud somewhere");
-           Console.WriteLine("7.You can visit MMA lecture");
-           Console.WriteLine("8.You can go went ");
-           Console.WriteLine("9.Info");
-           Console.WriteLine("0.I want to finish this stupid life.");
-           Console.WriteLine("Enter your choice as a number please");
-           int i = Int32.Parse(Program.Number(Console.ReadLine()));
-           while (i > 9 || i < 0)
-           { 
-               Console.WriteLine("I know that you've lide. Please enter again :");
-               i = Int32.Parse(Program.Number(Console.ReadLine()));
-           }
-           Console.WriteLine("\n");
-           return i;
-           }
+       Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
+       Console.WriteLine("1.Get some sleep");
+       Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
+       Console.WriteLine("3.Go to the GYM to your Dungeon Master");
+       Console.WriteLine("4.Go to the doctor");
+       Console.WriteLine("5.Games");
+       Console.WriteLine("6.You can fucking aroud somewhere");
+       Console.WriteLine("7.You can visit MMA lecture");
+       Console.WriteLine("8.You can go went ");
+       Console.WriteLine("9.Info");
+       Console.WriteLine("0.I want to finish this stupid life.");
+       Console.WriteLine("Enter your choice as a number please");
+       int i = Int32.Parse(Program.Number(Console.ReadLine()));
+       while (i > 9 || i < 0)
+       { 
+           Console.WriteLine("I know that you've lide. Please enter again :");
+           i = Int32.Parse(Program.Number(Console.ReadLine()));
+       }
+       Console.WriteLine("\n");
+       return i;
+       }
        
        public void Sleep(int a) // += 4
        {
@@ -149,8 +152,7 @@ namespace MyStudents
        public void Doctor()
        {
            if (this.HP == 10)
-           { 
-               Console.WriteLine("you are healthy, you do not need treatment");
+           { Console.WriteLine("you are healthy, you do not need treatment");
            }
 
            if (this.HP != 10)
@@ -183,8 +185,7 @@ namespace MyStudents
        public void Goingwent()
        {
            if (this.HP < 5)
-           {
-               Console.WriteLine("It's better stay home. I'm sick");
+           {Console.WriteLine("It's better stay home. I'm sick");
            }
            else
            {
@@ -208,14 +209,16 @@ namespace MyStudents
     class Student : Human
     {
         protected int knowledge;// max 100 
-        protected static int retaking = 0 ; // количество пересдач у всех студентов
+        protected static int[] retaking = new int[10] ; // количество пересдач у всех студентов
 
-        public static void Retek(Student a)
+        public static void Retek(Studentofspezialisation a)
         {
             if (a.knowledge < 20)
             { 
                 Console.WriteLine("you've missed to much lectures , you will have retaken");
-                retaking++;
+                a[0] = 0;
+                a[0]++;
+
             }
         }
         
@@ -246,8 +249,7 @@ namespace MyStudents
         }
         
         public void Info() 
-        {   
-            Console.WriteLine($"Name : {firstname}");
+        { Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -262,17 +264,16 @@ namespace MyStudents
     class Studentofspezialisation : Student
     {
         public string spezialisation;
-        
         public Studentofspezialisation(int HP, int AP, int power, int knowledge) : base(HP, AP, power, knowledge)
         {
             this.knowledge = knowledge;
         }
         
+
         public void MMALection()
         {
             if (this.AP < 4 )
-            { 
-               Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
+            { Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
             }
             else
             {
@@ -288,8 +289,7 @@ namespace MyStudents
             }
         }
         public void Info() 
-        {   
-            Console.WriteLine($"Name : {firstname}");
+        { Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -300,12 +300,17 @@ namespace MyStudents
             Console.WriteLine($"group : {this.group}");
             Console.WriteLine($"Spezialisation : {this.spezialisation}");
         }
-        
+
+        public int this[int index]
+        {
+            get { return retaking[index]; }
+            set { retaking[index] = value;}
+        }
+
         public void DOTA2()
         {   
             if (this.AP < 2)
-            {
-              Console.WriteLine("OOh , i'm too tired ");
+            { Console.WriteLine("OOh , i'm too tired ");
             }
             else
             {
@@ -316,7 +321,9 @@ namespace MyStudents
     }
     
     class Program
-    {   public static bool Word(string item)
+    {  
+        
+        public static bool Word(string item)
         {
             if (item.All(i => ((i >= 'A' && i <= 'Z') || (i >= 'a' && i <= 'z')))) return false;
             return true;
@@ -327,10 +334,12 @@ namespace MyStudents
             if (item.All(i => i <= '9' && i >= '.' && i != '/')) return item;
             return "0";
         }
-       
+        
+        
         static void Main(string[] args)
-        {
+        {   
             Studentofspezialisation me = new Studentofspezialisation(8,10,5, 70 );
+            
             //////////////////////////////////////////////////////////////
             Console.WriteLine("Enter your firstname : ");
             me.firstname = Console.ReadLine();
@@ -385,7 +394,7 @@ namespace MyStudents
                   case (int)MyEnum.GYM          : me.GYM(); break;
                   case (int)MyEnum.Doctor       : me.Doctor(); break;
                   case (int)MyEnum.Dota         : me.DOTA2();break;
-                  case (int)MyEnum.skip_classes : me.Fuckingaround();break;
+                  case (int)MyEnum.skip_classes : me.Fuckingaround();break; 
                   case (int)MyEnum.MMA          : me.MMALection();break;
                   case (int)MyEnum.went         : me.Goingwent();break;
                   case (int)MyEnum.info         : me.Info(); break;
