@@ -1,0 +1,9 @@
+D:\Rider_LABS\LAB_3&5\Da\DA\bin\Debug\net472\DA.exe.config
+D:\Rider_LABS\LAB_3&5\Da\DA\bin\Debug\net472\DA.exe
+D:\Rider_LABS\LAB_3&5\Da\DA\bin\Debug\net472\DA.pdb
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.csprojAssemblyReference.cache
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.AssemblyInfoInputs.cache
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.AssemblyInfo.cs
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.csproj.CoreCompileInputs.cache
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.exe
+D:\Rider_LABS\LAB_3&5\Da\DA\obj\Debug\net472\DA.pdb
