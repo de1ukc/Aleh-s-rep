@@ -1,0 +1,9 @@
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\bin\Debug\net472\Lastshit.exe.config
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\bin\Debug\net472\Lastshit.exe
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\bin\Debug\net472\Lastshit.pdb
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.csprojAssemblyReference.cache
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.AssemblyInfoInputs.cache
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.AssemblyInfo.cs
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.csproj.CoreCompileInputs.cache
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.exe
+D:\Rider_LABS\LAB_4\fuck\Lastshit\Lastshit\obj\Debug\net472\Lastshit.pdb

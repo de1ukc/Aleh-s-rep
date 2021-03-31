@@ -1,0 +1,9 @@
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.csprojAssemblyReference.cache
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.AssemblyInfoInputs.cache
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.AssemblyInfo.cs
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.csproj.CoreCompileInputs.cache
+D:\Rider_LABS\LAB_4\painting\painting\bin\Debug\net472\painting.exe.config
+D:\Rider_LABS\LAB_4\painting\painting\bin\Debug\net472\painting.exe
+D:\Rider_LABS\LAB_4\painting\painting\bin\Debug\net472\painting.pdb
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.exe
+D:\Rider_LABS\LAB_4\painting\painting\obj\Debug\net472\painting.pdb

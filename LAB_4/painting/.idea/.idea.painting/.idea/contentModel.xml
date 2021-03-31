@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Trapp\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Trapp\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_painting.2108890411.00" t="ExcludeRecursive" />
+    <e p="D:\Rider_LABS\LAB_4\painting" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="painting" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net472" t="Include">
+              <e p="painting.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="painting.csproj" t="IncludeRecursive" />
+        <e p="Program.cs" t="Include" />
+      </e>
+      <e p="painting.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
