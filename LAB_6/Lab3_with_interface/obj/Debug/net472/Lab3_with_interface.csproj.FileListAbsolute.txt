@@ -1,0 +1,9 @@
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.csprojAssemblyReference.cache
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.AssemblyInfoInputs.cache
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.AssemblyInfo.cs
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.csproj.CoreCompileInputs.cache
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\Lab3_with_interface.exe.config
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\Lab3_with_interface.exe
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\Lab3_with_interface.pdb
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.exe
+D:\Rider_LABS\LAB_5\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\Lab3_with_interface.pdb
