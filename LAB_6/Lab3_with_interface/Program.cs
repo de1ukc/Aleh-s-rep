@@ -25,7 +25,6 @@ namespace MyStudents
     {
         void pass_the_lab();
         void create_the_lab();
-        
     }
     
     class Human
