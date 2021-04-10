@@ -52,11 +52,11 @@ namespace Lab_6_raznes
        Console.WriteLine("9.Info");
        Console.WriteLine("0.I want to finish this stupid life.");
        Console.WriteLine("Enter your choice as a number please");
-       int i = Int32.Parse(Program.Number(Console.ReadLine()));
+       int i = Int32.Parse(Validation.Number(Console.ReadLine()));
        while (i > 9 || i < 0)
        { 
            Console.WriteLine("I know that you've lide. Please enter again :");
-           i = Int32.Parse(Program.Number(Console.ReadLine()));
+           i = Int32.Parse(Validation.Number(Console.ReadLine()));
        }
        Console.WriteLine("\n");
        return i;

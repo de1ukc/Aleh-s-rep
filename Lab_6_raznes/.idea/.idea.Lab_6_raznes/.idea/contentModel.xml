@@ -21,6 +21,7 @@
         <e p="Program.cs" t="Include" />
         <e p="Student.cs" t="Include" />
         <e p="Studentofspezialisation.cs" t="Include" />
+        <e p="Validation.cs" t="Include" />
       </e>
       <e p="Lab_6_raznes.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

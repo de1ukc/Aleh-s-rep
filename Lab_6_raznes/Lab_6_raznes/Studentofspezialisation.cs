@@ -4,7 +4,7 @@ namespace Lab_6_raznes
 {
     public class Studentofspezialisation : Student , ILabs 
     {
-         public string spezialisation;
+        public string spezialisation;
 
         protected bool labsFlag = false;
         
@@ -106,14 +106,17 @@ namespace Lab_6_raznes
             Console.WriteLine("6.Pass the lab");
             Console.WriteLine("7.You can visit MMA lecture");
             Console.WriteLine("8.You can go went ");
-            Console.WriteLine("9.Info");
+            Console.WriteLine("9.You can play Dota 2");
+            Console.WriteLine("10.You can skip classes and fucking around");
+            Console.WriteLine("11.Info");
             Console.WriteLine("0.I want to finish this stupid life.");
             Console.WriteLine("Enter your choice as a number please");
-            int i = Int32.Parse(Program.Number(Console.ReadLine()));
-            while (i > 9 || i < 0)
-            { 
-                Console.WriteLine("I know that you've lide. Please enter again :");
-                i = Int32.Parse(Program.Number(Console.ReadLine()));
+            int i;
+            bool test = Int32.TryParse(Console.ReadLine(), out i);
+            while (i > 11 || i < 0 || test == false)
+            {
+                Console.WriteLine("I know that you've lide. Please enter your choice correctly:");
+                test = Int32.TryParse(Console.ReadLine(), out i);
             }
             Console.WriteLine("\n");
             return i;

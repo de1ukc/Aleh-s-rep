@@ -6,13 +6,13 @@
         ShortSleep ,
         GYM ,
         Doctor ,
-        Dota ,
-        skip_classes ,
+        labCreate ,
+        labPass , 
         MMA ,
         went ,
+        Dota ,
+        skip_classes ,
         info ,
-        exit = 0,
-        labCreate = 5,
-        labPass = 6
+        exit = 0
     }
 }

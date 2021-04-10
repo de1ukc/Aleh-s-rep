@@ -2,19 +2,37 @@
 
 namespace Lab_6_raznes
 {
-    public class Student : Human
+    public class Student : Human , ILabs 
     {
         protected int knowledge;// max 100 
+        
         protected static int[] retaking = new int[10] ; // количество пересдач у всех студентов
+            
+        int counter = 0; // счётчик для пересдач
 
         public static void Retek(Studentofspezialisation a)
         {
-            if (a.knowledge < 20)
+            if (a.knowledge < 20 && a.counter == 0)
             { 
                 Console.WriteLine("you've missed to much lectures , you will have retaken");
                 a[0] = 0;
                 a[0]++;
+                a.counter++;
+            }
+            else
+            {
+                if (a.knowledge < 20 && a.counter != 0)
+                {
+                    Console.WriteLine("you've missed to much lectures , you will have retaken");
+                    a[0]++;
+                    a.counter++;
+                }
+            }
 
+            if (a[0] > 3)
+            {
+                Console.WriteLine("You're fired");
+                Environment.Exit(0);
             }
         }
         
@@ -35,7 +53,7 @@ namespace Lab_6_raznes
             }
             else
             {
-                this.knowledge -= 4;
+                this.knowledge -= 6;
                 if (this.knowledge < 0)
                 {
                     this.knowledge = 0;
@@ -54,6 +72,26 @@ namespace Lab_6_raznes
             Console.WriteLine($"Power: {power}");
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
+        }
+
+        public virtual void Humor()
+        {
+        }
+
+        public virtual void Nards()
+        {
+        }
+
+        public virtual void MMALection()
+        {
+        }
+
+        public void create_the_lab()
+        {
+        }
+
+        public void pass_the_lab()
+        {
         }
     }
 }
