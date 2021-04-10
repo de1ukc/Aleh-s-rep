@@ -1,0 +1,9 @@
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\bin\Debug\net472\Lab_5.exe.config
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\bin\Debug\net472\Lab_5.exe
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\bin\Debug\net472\Lab_5.pdb
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.csprojAssemblyReference.cache
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.AssemblyInfoInputs.cache
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.AssemblyInfo.cs
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.csproj.CoreCompileInputs.cache
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.exe
+D:\С# rep\Aleh-s-rep\Lab_5_norm\Lab_5\obj\Debug\net472\Lab_5.pdb
