@@ -70,7 +70,7 @@ namespace Lab_6_raznes
             Student.Retek(me);
             switch (me.Menu())
             { 
-                case (int)MyEnum.Sleep        : me.Sleep(8);       break;
+                case (int)MyEnum.Sleep        : me.Sleep(8);          break;
                 case (int)MyEnum.ShortSleep   : me.Sleep();           break;
                 case (int)MyEnum.GYM          : me.GYM();             break;
                 case (int)MyEnum.Doctor       : me.Doctor();          break;
