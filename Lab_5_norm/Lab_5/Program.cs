@@ -13,11 +13,11 @@ namespace Lab_6_raznes
             Console.WriteLine("\n");
             me.Info();
             
-            Student st = new Studentofspezialisation(6,8,4,50,"Nikolas","Vashkevich",""); 
+            Student st = new Studentofspezialisation(6,8,4,50,"Nikolas","Vashkevich","Vladimirovich"); 
             Console.WriteLine("\n");
             st.Info();
             
-            Human hm = new Student(5,7,6,40,"Dmitry","Gotchenya"," ");
+            Human hm = new Student(5,7,6,40,"Dmitry","Gotchenya","Gennad'evich ");
             Console.WriteLine("\n");
             hm.Info();
             
