@@ -1,9 +1,0 @@
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\lab_6.exe.config
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\lab_6.exe
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\bin\Debug\net472\lab_6.pdb
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.csprojAssemblyReference.cache
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.AssemblyInfoInputs.cache
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.AssemblyInfo.cs
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.csproj.CoreCompileInputs.cache
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.exe
-D:\Rider_LABS\LAB_6\Lab3_with_interface\Lab3_with_interface\obj\Debug\net472\lab_6.pdb
