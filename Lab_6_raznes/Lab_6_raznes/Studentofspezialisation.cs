@@ -2,7 +2,7 @@
 
 namespace Lab_6_raznes
 {
-    public class Studentofspezialisation : Student , ILabs 
+    public class Studentofspezialisation : Student , ILabs , Comp<Studentofspezialisation, Student>
     {
         public string spezialisation;
 
@@ -13,6 +13,12 @@ namespace Lab_6_raznes
             this.knowledge = knowledge;
         }
         
+        public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power,knowledge)
+        {
+            this.firstname = firstname;
+            this.secondname = secondname;
+            this.lastname = lastname;
+        }
 
         public void MMALection()
         {
@@ -94,7 +100,27 @@ namespace Lab_6_raznes
                 }
             }
         }
-        
+
+        public int Comparator(Studentofspezialisation a, Student b )
+        {
+            if (a.getKnowlege() > b.getKnowlege())  return 1;
+            if (a.getKnowlege() < b.getKnowlege())  return -1;
+            if (a.getKnowlege() == b.getKnowlege()) return 0;
+            return 2;
+        }
+
+        public void BrainTest(Studentofspezialisation a, Student b ) // must change text 
+        {
+            int i = Comparator(a, b);
+            switch (i)
+            {
+                case 1  : Console.WriteLine("Yes , science bitch, i'm smarter"); break;
+                case -1 : Console.WriteLine("Wooops, i am stupid"); break;
+                case 0  : Console.WriteLine("We both are genius"); break;
+                default: Console.WriteLine("I guess there was a mistake"); break;
+            }
+        }
+
         public int Menu()
         { 
             Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");

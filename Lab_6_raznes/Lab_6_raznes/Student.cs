@@ -10,6 +10,11 @@ namespace Lab_6_raznes
             
         int counter = 0; // счётчик для пересдач
 
+        public int getKnowlege()
+        {
+            return knowledge;
+        }
+
         public static void Retek(Studentofspezialisation a)
         {
             if (a.knowledge < 20 && a.counter == 0)
@@ -39,6 +44,13 @@ namespace Lab_6_raznes
         public Student(int HP, int AP, int Power, int knowledge) : base(HP, AP, Power)
         {
             this.knowledge = knowledge;
+        }
+        
+        public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power)
+        {
+            this.firstname = firstname;
+            this.secondname = secondname;
+            this.lastname = lastname;
         }
         
         public string group;

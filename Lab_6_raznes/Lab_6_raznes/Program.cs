@@ -10,11 +10,12 @@ namespace Lab_6_raznes
             Studentofspezialisation me = new Studentofspezialisation(8,10,5, 70 );
             
             Entering.entering(me);
-
-            while (true)
-            {
-                Entering.work(me);
-            }
+            
+            Student st = new Studentofspezialisation(6,8,4,50,"Nikolas","Vashkevich","Vladimirovich"); 
+            
+            me.BrainTest(me,st); // compare intefrace
+            
+           
         }
     }
 }
