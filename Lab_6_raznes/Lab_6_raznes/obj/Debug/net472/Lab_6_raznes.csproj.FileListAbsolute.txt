@@ -7,3 +7,12 @@ D:\Rider_LABS\LAB_6_test\Lab_6_raznes\Lab_6_raznes\bin\Debug\net472\Lab_6_raznes
 D:\Rider_LABS\LAB_6_test\Lab_6_raznes\Lab_6_raznes\bin\Debug\net472\Lab_6_raznes.pdb
 D:\Rider_LABS\LAB_6_test\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.exe
 D:\Rider_LABS\LAB_6_test\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.pdb
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\bin\Debug\net472\Lab_6_raznes.exe.config
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\bin\Debug\net472\Lab_6_raznes.exe
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\bin\Debug\net472\Lab_6_raznes.pdb
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.csprojAssemblyReference.cache
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.AssemblyInfoInputs.cache
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.AssemblyInfo.cs
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.csproj.CoreCompileInputs.cache
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.exe
+D:\С# rep\Aleh-s-rep\Lab_6_raznes\Lab_6_raznes\obj\Debug\net472\Lab_6_raznes.pdb

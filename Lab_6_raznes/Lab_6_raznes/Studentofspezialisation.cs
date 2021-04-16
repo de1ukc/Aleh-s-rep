@@ -2,7 +2,7 @@
 
 namespace Lab_6_raznes
 {
-    public class Studentofspezialisation : Student , ILabs , Comp<Studentofspezialisation, Student>
+    public class Studentofspezialisation : Student , ILabs , Comp<Studentofspezialisation, Student> , IGames
     {
         public string spezialisation;
 
@@ -150,5 +150,40 @@ namespace Lab_6_raznes
             return i;
         }
 
+        public void russianRoulette()
+        {
+            Console.WriteLine("Okay , here we go , we are students of IITP, we are fearless and we play in hard games.");
+            Console.WriteLine("So, we gonna play Russian Roulette");
+            Console.WriteLine("We charge 1 bullet");
+            Random r = new Random();
+            int c;
+            int a = r.Next(7);
+            int[] b = new int [6];
+            b[a] = 1; // bullet 
+            while (true)
+            {
+                Console.WriteLine("Enter a number between 0 and 5 , 6 == Exit ");
+                bool test = Int32.TryParse(Console.ReadLine(), out c);
+                while (c > 6 || c < 0 || test == false)
+                {
+                    Console.WriteLine("I know that you've lide. Please enter your age :");
+                    test = Int32.TryParse(Console.ReadLine(), out c);
+                }
+
+                if (c == 6) return;
+                else if (b[a] == b[c])
+                {
+                    Console.WriteLine("YOU DIE");
+                    Environment.Exit(0);
+                }
+                else Console.WriteLine("I have won , Jessy");
+            }
+
+        }
+
+        public void cards()
+        {
+            Console.WriteLine("We dont play this  game, we play only hardgames , only hardkore");
+        }
     }
 }

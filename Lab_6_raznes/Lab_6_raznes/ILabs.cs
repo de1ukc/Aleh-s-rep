@@ -10,4 +10,10 @@
     {
         int Comparator(T a, T1 b);
     }
+
+    public interface IGames
+    {
+        void cards();
+        void russianRoulette();
+    }
 }
