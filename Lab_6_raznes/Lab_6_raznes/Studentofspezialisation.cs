@@ -13,14 +13,15 @@ namespace Lab_6_raznes
             this.knowledge = knowledge;
         }
         
-        public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power,knowledge)
+        public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power,knowledge)
         {
             this.firstname = firstname;
             this.secondname = secondname;
             this.lastname = lastname;
+            this.group = group;
         }
 
-        public void MMALection()
+        public virtual void MMALection()
         {
             if (this.AP < 4 )
             { Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
@@ -38,8 +39,9 @@ namespace Lab_6_raznes
                 }
             }
         }
-        public void Info() 
-        { Console.WriteLine($"Name : {firstname}");
+        public override void Info ()
+        { 
+            Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -121,8 +123,8 @@ namespace Lab_6_raznes
             }
         }
 
-        public int Menu()
-        { 
+        public override int Menu()
+        {
             Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
             Console.WriteLine("1.Get some sleep");
             Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
@@ -147,5 +149,6 @@ namespace Lab_6_raznes
             Console.WriteLine("\n");
             return i;
         }
+
     }
 }

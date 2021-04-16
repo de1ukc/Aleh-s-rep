@@ -5,6 +5,7 @@ namespace Lab_6_raznes
     public class Student : Human , ILabs 
     {
         protected int knowledge;// max 100 
+        public string group;
         
         protected static int[] retaking = new int[10] ; // количество пересдач у всех студентов
             
@@ -46,14 +47,14 @@ namespace Lab_6_raznes
             this.knowledge = knowledge;
         }
         
-        public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power)
+        public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power)
         {
             this.firstname = firstname;
             this.secondname = secondname;
             this.lastname = lastname;
+            this.group = group;
         }
         
-        public string group;
         
         public void Fuckingaround()
         {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
@@ -74,8 +75,9 @@ namespace Lab_6_raznes
             }
         }
         
-        public void Info() 
-        { Console.WriteLine($"Name : {firstname}");
+        public virtual void Info() 
+        { 
+            Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -94,10 +96,6 @@ namespace Lab_6_raznes
         {
         }
 
-        public virtual void MMALection()
-        {
-        }
-
         public void create_the_lab()
         {
         }
@@ -105,5 +103,6 @@ namespace Lab_6_raznes
         public void pass_the_lab()
         {
         }
+        
     }
 }

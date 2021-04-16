@@ -64,7 +64,7 @@ namespace Lab_6_raznes
             }
         }
 
-        public static void work(Studentofspezialisation me)
+        public static void work<T>(T me) where T : Studentofspezialisation 
         {
             me.Isalive();
             Student.Retek(me);

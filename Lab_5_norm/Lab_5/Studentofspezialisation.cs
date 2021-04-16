@@ -2,7 +2,7 @@
 
 namespace Lab_6_raznes
 {
-    public class Studentofspezialisation : Student , ILabs 
+    public class Studentofspezialisation : Student , ILabs , Comp<Studentofspezialisation, Student>
     {
         public string spezialisation;
 
@@ -13,14 +13,15 @@ namespace Lab_6_raznes
             this.knowledge = knowledge;
         }
         
-        public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power,knowledge)
+        public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power,knowledge)
         {
             this.firstname = firstname;
             this.secondname = secondname;
             this.lastname = lastname;
+            this.group = group;
         }
-        
-        public void MMALection()
+
+        public virtual void MMALection()
         {
             if (this.AP < 4 )
             { Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
@@ -38,8 +39,9 @@ namespace Lab_6_raznes
                 }
             }
         }
-        public void Info() 
-        { Console.WriteLine($"Name : {firstname}");
+        public override void Info ()
+        { 
+            Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
             Console.WriteLine($"Lastname : {lastname}");
             Console.WriteLine($"Age : {age}");
@@ -100,9 +102,29 @@ namespace Lab_6_raznes
                 }
             }
         }
-        
-        public int Menu()
-        { 
+
+        public int Comparator(Studentofspezialisation a, Student b )
+        {
+            if (a.getKnowlege() > b.getKnowlege())  return 1;
+            if (a.getKnowlege() < b.getKnowlege())  return -1;
+            if (a.getKnowlege() == b.getKnowlege()) return 0;
+            return 2;
+        }
+
+        public void BrainTest(Studentofspezialisation a, Student b ) // must change text 
+        {
+            int i = Comparator(a, b);
+            switch (i)
+            {
+                case 1  : Console.WriteLine("Yes , science bitch, i'm smarter"); break;
+                case -1 : Console.WriteLine("Wooops, i am stupid"); break;
+                case 0  : Console.WriteLine("We both are genius"); break;
+                default: Console.WriteLine("I guess there was a mistake"); break;
+            }
+        }
+
+        public override int Menu()
+        {
             Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
             Console.WriteLine("1.Get some sleep");
             Console.WriteLine("2.Get some sleep , but during the day ( VERY DANGEROUS!!!)");
@@ -127,5 +149,6 @@ namespace Lab_6_raznes
             Console.WriteLine("\n");
             return i;
         }
+
     }
 }

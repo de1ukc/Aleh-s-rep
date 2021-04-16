@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rider_LABS\\LAB_6_test\\Lab_6_raznes\\Lab_6_raznes\\Lab_6_raznes.csproj",
+      "projectUniqueName": "D:\\С# rep\\Aleh-s-rep\\Lab_6_raznes\\Lab_6_raznes\\Lab_6_raznes.csproj",
       "projectName": "Lab_6_raznes",
-      "projectPath": "D:\\Rider_LABS\\LAB_6_test\\Lab_6_raznes\\Lab_6_raznes\\Lab_6_raznes.csproj",
+      "projectPath": "D:\\С# rep\\Aleh-s-rep\\Lab_6_raznes\\Lab_6_raznes\\Lab_6_raznes.csproj",
       "packagesPath": "C:\\Users\\Trapp\\.nuget\\packages\\",
-      "outputPath": "D:\\Rider_LABS\\LAB_6_test\\Lab_6_raznes\\Lab_6_raznes\\obj\\",
+      "outputPath": "D:\\С# rep\\Aleh-s-rep\\Lab_6_raznes\\Lab_6_raznes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Trapp\\AppData\\Roaming\\NuGet\\NuGet.Config",

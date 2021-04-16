@@ -38,7 +38,7 @@ namespace Lab_6_raznes
                 {Console.WriteLine("YOU DIED"); Environment.Exit(0); }
        }
 
-       public int Menu()
+       public virtual int Menu()
        { 
        Console.WriteLine("\n"); Console.WriteLine("Well, we can do some shit, what are we gonna do?");
        Console.WriteLine("1.Get some sleep");

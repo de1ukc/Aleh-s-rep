@@ -2,13 +2,19 @@
 
 namespace Lab_6_raznes
 {
-    public class Student : Human  
+    public class Student : Human , ILabs 
     {
         protected int knowledge;// max 100 
+        public string group;
         
         protected static int[] retaking = new int[10] ; // количество пересдач у всех студентов
             
         int counter = 0; // счётчик для пересдач
+
+        public int getKnowlege()
+        {
+            return knowledge;
+        }
 
         public static void Retek(Studentofspezialisation a)
         {
@@ -40,15 +46,15 @@ namespace Lab_6_raznes
         {
             this.knowledge = knowledge;
         }
-
-        public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname) : base(HP, AP, Power)
+        
+        public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power)
         {
             this.firstname = firstname;
             this.secondname = secondname;
             this.lastname = lastname;
+            this.group = group;
         }
-
-        public string group;
+        
         
         public void Fuckingaround()
         {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
@@ -69,7 +75,7 @@ namespace Lab_6_raznes
             }
         }
         
-        public void Info() 
+        public virtual void Info() 
         { 
             Console.WriteLine($"Name : {firstname}");
             Console.WriteLine($"Secondname : {secondname}");
@@ -80,7 +86,6 @@ namespace Lab_6_raznes
             Console.WriteLine($"Power: {power}");
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
-            Console.WriteLine("There is no spezialisation , im just simple student");
         }
 
         public virtual void Humor()
@@ -90,7 +95,14 @@ namespace Lab_6_raznes
         public virtual void Nards()
         {
         }
-        
+
+        public void create_the_lab()
+        {
+        }
+
+        public void pass_the_lab()
+        {
+        }
         
     }
 }
