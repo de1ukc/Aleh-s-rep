@@ -9,29 +9,27 @@ namespace Lab_6_raznes
         {
             //////////////////////////////////////////////////////////////
             Console.WriteLine("Enter your firstname : ");
-            me.firstname = Console.ReadLine();
-            while (Validation.Word(me.firstname) || me.firstname == "")
+            me.firstName = Console.ReadLine();
+            while (Validation.Word(me.firstName) || me.firstName == "")
             {
                 Console.WriteLine("You are liar.Enter your firstname correctly : ");
-                me.firstname = Console.ReadLine();
+                me.firstName = Console.ReadLine();
             }
-
             //////////////////////////////////////////////////////////////
             Console.WriteLine("Enter your secondname : ");
-            me.secondname = Console.ReadLine();
-            while (Validation.Word(me.secondname) || me.secondname == "")
+            me.secondName = Console.ReadLine();
+            while (Validation.Word(me.secondName) || me.secondName == "")
             {
                 Console.WriteLine("You are liar.Enter your secondname correctly : ");
-                me.secondname = Console.ReadLine();
+                me.secondName = Console.ReadLine();
             }
-
             ////////////////////////////////////////////////////////////////
             Console.WriteLine("Enter your lastname : ");
-            me.lastname = Console.ReadLine();
-            while (Validation.Word(me.lastname) || me.lastname == "")
+            me.secondName = Console.ReadLine();
+            while (Validation.Word(me.secondName) || me.secondName == "")
             {
                 Console.WriteLine("You are liar.Enter your lastname correctly : ");
-                me.lastname = Console.ReadLine();
+                me.secondName = Console.ReadLine();
             }
 
             ////////////////////////////////////////////////////////////////
@@ -74,8 +72,8 @@ namespace Lab_6_raznes
                 case (int)MyEnum.ShortSleep   : me.Sleep();           break;
                 case (int)MyEnum.GYM          : me.GYM();             break;
                 case (int)MyEnum.Doctor       : me.Doctor();          break;
-                case (int)MyEnum.labCreate    : me.create_the_lab();  break;
-                case (int)MyEnum.labPass      : me.pass_the_lab();    break; 
+                case (int)MyEnum.labCreate    : me.CreateTheLab();  break;
+                case (int)MyEnum.labPass      : me.PassTheLab();    break; 
                 case (int)MyEnum.MMA          : me.MMALection();      break;
                 case (int)MyEnum.went         : me.Goingwent();       break; 
                 case (int)MyEnum.Dota         : me.DOTA2();           break;

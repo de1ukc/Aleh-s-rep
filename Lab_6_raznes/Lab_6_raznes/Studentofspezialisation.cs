@@ -15,16 +15,17 @@ namespace Lab_6_raznes
         
         public Studentofspezialisation(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power,knowledge)
         {
-            this.firstname = firstname;
-            this.secondname = secondname;
-            this.lastname = lastname;
-            this.group = group;
+            this.firstName  = firstname;
+            this.secondName = secondname;
+            this.lastName   = lastname;
+            this.group      = group;
         }
 
         public virtual void MMALection()
         {
             if (this.AP < 4 )
-            { Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
+            { 
+                Console.WriteLine("it is useless , i'm too tired for that shit. Better stay home.");
             }
             else
             {
@@ -41,9 +42,9 @@ namespace Lab_6_raznes
         }
         public override void Info ()
         { 
-            Console.WriteLine($"Name : {firstname}");
-            Console.WriteLine($"Secondname : {secondname}");
-            Console.WriteLine($"Lastname : {lastname}");
+            Console.WriteLine($"Name : {firstName}");
+            Console.WriteLine($"Secondname : {secondName}");
+            Console.WriteLine($"Lastname : {lastName}");
             Console.WriteLine($"Age : {age}");
             Console.WriteLine($"HP: {HP}");
             Console.WriteLine($"AP: {AP}");
@@ -71,7 +72,7 @@ namespace Lab_6_raznes
             }
         }
 
-        public void create_the_lab()
+        public void CreateTheLab()
         {
             if (labsFlag == true )
             {
@@ -84,7 +85,7 @@ namespace Lab_6_raznes
             }
         }
 
-        public void pass_the_lab()
+        public void PassTheLab()
         {
             Random r = new Random();
             int a = r.Next(2);
@@ -116,10 +117,10 @@ namespace Lab_6_raznes
             int i = Comparator(a, b);
             switch (i)
             {
-                case 1  : Console.WriteLine("Yes , science bitch, i'm smarter"); break;
-                case -1 : Console.WriteLine("Wooops, i am stupid"); break;
-                case 0  : Console.WriteLine("We both are genius"); break;
-                default: Console.WriteLine("I guess there was a mistake"); break;
+                case  1  : Console.WriteLine("Yes , science bitch, i'm smarter"); break;
+                case -1  : Console.WriteLine("Wooops, i am stupid"); break;
+                case  0  : Console.WriteLine("We both are genius"); break;
+                default  : Console.WriteLine("I guess there was a mistake"); break;
             }
         }
 
@@ -150,38 +151,36 @@ namespace Lab_6_raznes
             return i;
         }
 
-        public void russianRoulette()
+        public void RussianRoulette()
         {
             Console.WriteLine("Okay , here we go , we are students of IITP, we are fearless and we play in hard games.");
             Console.WriteLine("So, we gonna play Russian Roulette");
             Console.WriteLine("We charge 1 bullet");
             Random r = new Random();
-            int c;
-            int a = r.Next(7);
-            int[] b = new int [6];
-            b[a] = 1; // bullet 
+            int yourPick;
+            int bullet = r.Next(7);    
+            int[] drum = new int [6]; 
+            drum[bullet] = 1; 
             while (true)
             {
                 Console.WriteLine("Enter a number between 0 and 5 , 6 == Exit ");
-                bool test = Int32.TryParse(Console.ReadLine(), out c);
-                while (c > 6 || c < 0 || test == false)
+                bool test = Int32.TryParse(Console.ReadLine(), out yourPick);
+                while (yourPick > 6 || yourPick < 0 || test == false)
                 {
                     Console.WriteLine("I know that you've lide. Please enter your age :");
-                    test = Int32.TryParse(Console.ReadLine(), out c);
+                    test = Int32.TryParse(Console.ReadLine(), out yourPick);
                 }
-
-                if (c == 6) return;
-                else if (b[a] == b[c])
+                if (yourPick == 6) return;
+                else if (drum[bullet] == drum[yourPick])
                 {
                     Console.WriteLine("YOU DIE");
                     Environment.Exit(0);
                 }
                 else Console.WriteLine("I have won , Jessy");
             }
-
         }
 
-        public void cards()
+        public void Cards()
         {
             Console.WriteLine("We dont play this  game, we play only hardgames , only hardkore");
         }

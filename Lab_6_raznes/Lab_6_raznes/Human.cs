@@ -11,9 +11,9 @@ namespace Lab_6_raznes
     protected int HP; //очки здоровья
     protected int AP; //очки действия 
     protected int power; //очки силы
-    public string firstname;
-    public string secondname;
-    public string lastname;
+    public string firstName;
+    public string secondName;
+    public string lastName;
     public int age;
 
     public Human(int HP, int AP, int power)
@@ -23,17 +23,17 @@ namespace Lab_6_raznes
         this.power = power;
     }
 
-    public Human(string firstname, int age)
+    public Human(string firstName, int age)
     {
         this.age = age;
-        this.firstname = firstname;
+        this.firstName = firstName;
     }
 
     public void Info()
     {
-        Console.WriteLine($"Name : {firstname}");
-        Console.WriteLine($"Secondname : {secondname}");
-        Console.WriteLine($"Lastname : {lastname}");
+        Console.WriteLine($"Name : {firstName}");
+        Console.WriteLine($"Secondname : {secondName}");
+        Console.WriteLine($"Lastname : {lastName}");
         Console.WriteLine($"Age : {age}");
         Console.WriteLine($"HP: {HP}");
         Console.WriteLine($"AP: {AP}");
@@ -70,7 +70,6 @@ namespace Lab_6_raznes
             Console.WriteLine("I know that you've lide. Please enter again :");
             i = Int32.Parse(Validation.Number(Console.ReadLine()));
         }
-
         Console.WriteLine("\n");
         return i;
     }
@@ -82,9 +81,7 @@ namespace Lab_6_raznes
         {
             this.AP = 10;
         }
-
         Console.WriteLine($"You've been asleep all night,{a} hours.Your AP now is {this.AP}");
-
     }
 
     public void Sleep() // rand
@@ -96,11 +93,9 @@ namespace Lab_6_raznes
         {
             this.AP = 10;
         }
-
         Console.WriteLine(
             "You went to bed in the afternoon, it is not known at what time of the year and era you woke up." +
             $" It seems better not to do so. Your AP has increased to {this.AP} points.");
-
     }
 
     public void GYM()
@@ -125,9 +120,7 @@ namespace Lab_6_raznes
                     this.power = 10;
                     Console.WriteLine("Wow , you are dungen master.");
                 }
-
-                Console.WriteLine(
-                    $"You found Master of the GYM and worked out.Your Power now is increased to {this.power}");
+                Console.WriteLine($"You found Master of the GYM and worked out.Your Power now is increased to {this.power}");
             }
 
             if (this.AP == 10)
@@ -138,7 +131,6 @@ namespace Lab_6_raznes
                 {
                     this.power = 10;
                 }
-
                 Console.WriteLine($"UNLIMITED POWEEER.\n Your Power now is increased to {this.power}");
             }
 
@@ -149,7 +141,6 @@ namespace Lab_6_raznes
                 this.HP--;
                 Console.WriteLine($"you are injured, you should go to the doctor, your HP is now equal {this.HP}");
             }
-
             if (this.power == 10)
             {
                 Console.WriteLine("I'm too strong and powerful , now i can everything.");
@@ -163,7 +154,6 @@ namespace Lab_6_raznes
         {
             Console.WriteLine("you are healthy, you do not need treatment");
         }
-
         if (this.HP != 10)
         {
             this.HP += 3;
@@ -171,7 +161,6 @@ namespace Lab_6_raznes
             {
                 this.HP = 10;
             }
-
             Console.WriteLine($"you were cured, you HP : {this.HP}");
         }
 
@@ -186,7 +175,6 @@ namespace Lab_6_raznes
                 Console.WriteLine("YOU DIE");
                 Environment.Exit(0);
             }
-
             Console.WriteLine($"Woops you got even more ill in the hospital, your HP : {this.HP}");
         }
     }
@@ -239,12 +227,9 @@ namespace Lab_6_raznes
     {
         if (this.age > other.age)
             return 1;
-        
         else if (this.age < other.age)
             return -1;
         else return 0;
     }
-    
-    
     }
 }

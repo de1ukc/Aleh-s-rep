@@ -2,7 +2,7 @@
 
 namespace Lab_6_raznes
 {
-    public class Student : Human , ILabs 
+    public class Student : Human  
     {
         protected int knowledge;// max 100 
         public string group;
@@ -49,15 +49,16 @@ namespace Lab_6_raznes
         
         public Student(int HP, int AP, int Power, int knowledge, string firstname, string secondname, string lastname, string group) : base(HP, AP, Power)
         {
-            this.firstname = firstname;
-            this.secondname = secondname;
-            this.lastname = lastname;
+            this.firstName = firstname;
+            this.secondName = secondname;
+            this.lastName = lastname;
             this.group = group;
         }
         
         
         public void Fuckingaround()
-        {  Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
+        {  
+            Console.WriteLine("Well, your a typical student, and it' another day when you fucking around instead of classes , may be you are too bored");
             this.AP -= 2;
             if (this.AP <= 0)
             {
@@ -77,9 +78,9 @@ namespace Lab_6_raznes
         
         public virtual void Info() 
         { 
-            Console.WriteLine($"Name : {firstname}");
-            Console.WriteLine($"Secondname : {secondname}");
-            Console.WriteLine($"Lastname : {lastname}");
+            Console.WriteLine($"Name : {firstName}");
+            Console.WriteLine($"Secondname : {secondName}");
+            Console.WriteLine($"Lastname : {lastName}");
             Console.WriteLine($"Age : {age}");
             Console.WriteLine($"HP: {HP}");
             Console.WriteLine($"AP: {AP}");
@@ -87,22 +88,5 @@ namespace Lab_6_raznes
             Console.WriteLine($"Knowledge: {this.knowledge}");
             Console.WriteLine($"group : {this.group}");
         }
-
-        public virtual void Humor()
-        {
-        }
-
-        public virtual void Nards()
-        {
-        }
-
-        public void create_the_lab()
-        {
-        }
-
-        public void pass_the_lab()
-        {
-        }
-        
     }
 }

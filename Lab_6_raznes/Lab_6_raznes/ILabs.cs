@@ -2,8 +2,8 @@
 {
     public interface ILabs
     {
-        void pass_the_lab();
-        void create_the_lab();
+        void PassTheLab();
+        void CreateTheLab();
     }
 
     public interface Comp<T,T1>
@@ -13,7 +13,7 @@
 
     public interface IGames
     {
-        void cards();
-        void russianRoulette();
+        void Cards();
+        void RussianRoulette();
     }
 }
