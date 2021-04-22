@@ -40,6 +40,7 @@ namespace Lab_6_raznes
                 }
             }
         }
+        
         public override void Info ()
         { 
             Console.WriteLine($"Name : {firstName}");
