@@ -7,3 +7,12 @@ D:\Rider_LABS\LAB_7\Calc\Calc\bin\Debug\net472\Calc.exe
 D:\Rider_LABS\LAB_7\Calc\Calc\bin\Debug\net472\Calc.pdb
 D:\Rider_LABS\LAB_7\Calc\Calc\obj\Debug\net472\Calc.exe
 D:\Rider_LABS\LAB_7\Calc\Calc\obj\Debug\net472\Calc.pdb
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\bin\Debug\net472\Calc.exe.config
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\bin\Debug\net472\Calc.exe
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\bin\Debug\net472\Calc.pdb
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.csprojAssemblyReference.cache
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.AssemblyInfoInputs.cache
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.AssemblyInfo.cs
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.csproj.CoreCompileInputs.cache
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.exe
+D:\С# rep\Aleh-s-rep\LAB_7\Calc\Calc\obj\Debug\net472\Calc.pdb

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\Calc.csproj",
+      "projectUniqueName": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\Calc.csproj",
       "projectName": "Calc",
-      "projectPath": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\Calc.csproj",
+      "projectPath": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\Calc.csproj",
       "packagesPath": "C:\\Users\\Trapp\\.nuget\\packages\\",
-      "outputPath": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\obj\\",
+      "outputPath": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Trapp\\AppData\\Roaming\\NuGet\\NuGet.Config",

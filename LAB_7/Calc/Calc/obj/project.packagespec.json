@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\Calc.csproj",
+    "projectUniqueName": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\Calc.csproj",
     "projectName": "Calc",
-    "projectPath": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\Calc.csproj",
-    "outputPath": "D:\\Rider_LABS\\LAB_7\\Calc\\Calc\\obj\\",
+    "projectPath": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\Calc.csproj",
+    "outputPath": "D:\\С# rep\\Aleh-s-rep\\LAB_7\\Calc\\Calc\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "net472"
