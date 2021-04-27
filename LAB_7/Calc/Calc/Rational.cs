@@ -108,10 +108,11 @@ namespace Calc
         
         public int CompareTo(Rational other)
         {
-            double doubleFirst = this.GetDouble();
-            double doubleSecond = other.GetDouble();
-            if (doubleFirst > doubleSecond) return 1;
-            else if (doubleFirst < doubleSecond) return -1;
+            long lcm = this.Denumerator * other.Denumerator / Rational.GCD(this.Denumerator, other.Denumerator);
+            long firstNewNumerator = this.Numerator * lcm / this.Denumerator;
+            long secondNewNumerator = other.Numerator * lcm / other.Denumerator;
+            if (firstNewNumerator > secondNewNumerator) return 1;
+            else if (firstNewNumerator < secondNewNumerator) return -1;
             else return 0;
         }
 

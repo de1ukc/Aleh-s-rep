@@ -8,6 +8,7 @@ namespace Calc
         {
             Rational first = new Rational(-1,2);
             Rational second = new Rational(2,20);
+           
             Rational test;
             Console.WriteLine( "x1 = " + first.ToString());
             Console.WriteLine("x2 = " + second.ToString() + "\n");
