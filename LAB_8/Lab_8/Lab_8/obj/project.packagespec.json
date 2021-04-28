@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\Rider_LABS\\LAB_8\\Lab_8\\Lab_8\\Lab_8.csproj",
+    "projectUniqueName": "D:\\С# rep\\Aleh-s-rep\\LAB_8\\Lab_8\\Lab_8\\Lab_8.csproj",
     "projectName": "Lab_8",
-    "projectPath": "D:\\Rider_LABS\\LAB_8\\Lab_8\\Lab_8\\Lab_8.csproj",
-    "outputPath": "D:\\Rider_LABS\\LAB_8\\Lab_8\\Lab_8\\obj\\",
+    "projectPath": "D:\\С# rep\\Aleh-s-rep\\LAB_8\\Lab_8\\Lab_8\\Lab_8.csproj",
+    "outputPath": "D:\\С# rep\\Aleh-s-rep\\LAB_8\\Lab_8\\Lab_8\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "net472"

@@ -8,10 +8,11 @@ namespace Lab_8
         
         static void Main(string[] args)
         {
-            Studentofspezialisation st = new Studentofspezialisation(6,8,4,40,"Nikolas","Vashkevich","Vladimirovich", "053502"); 
-            Student hm = new Studentofspezialisation(5,7,6,40,"Dmitry","Gotchenya","Gennad'evich ","053502");    
+            Studentofspezialisation iitp = new Studentofspezialisation(6,8,4,40,"Nikolas","Vashkevich","Vladimirovich", "053502"); 
+            Student st = new Studentofspezialisation(5,7,6,40,"Dmitry","Gotchenya","Gennad'evich ","053502");    
+            Human hm = new Studentofspezialisation(8,4,7,75,"Aleh","Asadchy","eduardovich", "053506");
             
-            st.PrintSomething(x  =>
+            iitp.PrintSomething(x  =>
              {
                  
                  Console.WriteLine("You can write here whatever you want:" );
@@ -19,10 +20,20 @@ namespace Lab_8
                  Console.WriteLine(x);
              });
             
-            st.Cleverer += msg => Console.WriteLine(msg);
-            st.Stupider += delegate(string msg) { Console.WriteLine(msg); };
-            st.Equal += msg => Console.WriteLine(msg);
-            st.BrainTest(st,hm,"Nikolas");
+            iitp.Cleverer += msg => Console.WriteLine(msg);
+            iitp.Stupider += delegate(string msg) { Console.WriteLine(msg); };
+            iitp.Equal += msg => Console.WriteLine(msg);
+            iitp.BrainTest(iitp,st,"Nikolas");
+
+            void Shclaffen(int hr)
+            {
+                Console.WriteLine($"I slept for {hr} hours");
+            }
+            
+            hm.Slumber += Shclaffen;
+            hm.Sleep(5);
+            
+
         }
     }
 }
