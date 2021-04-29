@@ -7,7 +7,7 @@ namespace Lab_8
      {
          public delegate void PrintMethod(string msg);
          
-         public void PrintSomething(PrintMethod method)
+         public void Feedback(PrintMethod method)
          {
              method?.Invoke(ToString());
          }

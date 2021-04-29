@@ -8,13 +8,12 @@ namespace Lab_8
         
         static void Main(string[] args)
         {
-            Studentofspezialisation iitp = new Studentofspezialisation(6,8,4,40,"Nikolas","Vashkevich","Vladimirovich", "053502"); 
+            Studentofspezialisation iitp = new Studentofspezialisation(6,8,4,60,"Nikolas","Vashkevich","Vladimirovich", "053502"); 
             Student st = new Studentofspezialisation(5,7,6,40,"Dmitry","Gotchenya","Gennad'evich ","053502");    
             Human hm = new Studentofspezialisation(8,4,7,75,"Aleh","Asadchy","eduardovich", "053506");
             
-            iitp.PrintSomething(x  =>
+            iitp.Feedback(x  =>
              {
-                 
                  Console.WriteLine("You can write here whatever you want:" );
                  x = Console.ReadLine();
                  Console.WriteLine(x);
