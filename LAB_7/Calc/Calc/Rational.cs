@@ -224,6 +224,7 @@ namespace Calc
         public override bool Equals(Object obj)
         {
             Rational number = obj as Rational;
+            if (number == null) return false;
             return this.Numerator == number.Numerator && this.Denumerator == number.Denumerator;
         }
 
