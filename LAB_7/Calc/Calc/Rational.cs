@@ -155,10 +155,20 @@ namespace Calc
         {
             return Convert.ToInt32(GetDouble());
         }
+        
+        public static explicit operator int (Rational number)
+        {
+            return number.ToInt32(null);
+        }
 
         public short ToInt16(IFormatProvider provider)
         {
             return Convert.ToInt16(GetDouble());
+        }
+
+        public static explicit operator short(Rational number)
+        {
+            return number.ToInt16(null);
         }
 
         public long ToInt64(IFormatProvider provider)
@@ -166,14 +176,29 @@ namespace Calc
             return Convert.ToInt64(GetDouble());
         }
 
+        public static explicit operator long(Rational number)
+        {
+            return number.ToInt64(null);
+        }
+
         public bool ToBoolean(IFormatProvider provider)
         {
             return Convert.ToBoolean(GetDouble());
         }
 
+        public static explicit operator bool(Rational number)
+        {
+            return number.ToBoolean(null);
+        }
+
         public char ToChar(IFormatProvider provider)
         {
             return Convert.ToChar(GetDouble());
+        }
+
+        public static explicit operator char(Rational number)
+        {
+            return number.ToChar(null);
         }
 
         public sbyte ToSByte(IFormatProvider provider)
@@ -355,6 +380,11 @@ namespace Calc
         public static Rational Abs(Rational number)
         {
             return new Rational(Math.Abs(number.Numerator), number.Denumerator);
+        }
+
+        public static implicit operator Rational(int x)
+        {
+            return new Rational(x);
         }
     }
 }

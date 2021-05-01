@@ -61,6 +61,11 @@ namespace Calc
             {
                 Console.WriteLine(e.Message);
             }
+
+            int x = 5;
+            test = 5;
+            Console.WriteLine(test.ToString("standart"));
+
         }
     }
 }
