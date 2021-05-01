@@ -62,8 +62,8 @@ namespace Calc
                 Console.WriteLine(e.Message);
             }
 
-            int x = 5;
-            test = 5;
+            double x = 5.777;
+            test = 1 + (Rational)x;
             Console.WriteLine(test.ToString("standart"));
 
         }

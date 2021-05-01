@@ -236,6 +236,11 @@ namespace Calc
             return Convert.ToDecimal(GetDouble());
         }
 
+        public static explicit operator decimal(Rational number)
+        {
+            return number.ToDecimal(null);
+        }
+
         public DateTime ToDateTime(IFormatProvider provider)
         {
             return Convert.ToDateTime(GetDouble());
@@ -385,6 +390,21 @@ namespace Calc
         public static implicit operator Rational(int x)
         {
             return new Rational(x);
+        }
+
+        public static implicit operator Rational(double x)
+        {
+            double fract = x - (int) x;
+            string buffer = fract.ToString();
+            long denumerator = 1;
+            int i = buffer.Length - 2;
+            while (i != 0)
+            {
+                denumerator *= 10;
+                i--;
+            }
+            long numerator = (long) x * denumerator + (long)(fract * denumerator);
+            return new Rational(numerator, denumerator);
         }
     }
 }
