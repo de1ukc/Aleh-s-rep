@@ -206,9 +206,19 @@ namespace Calc
             return Convert.ToSByte(GetDouble());
         }
 
+        public static explicit operator SByte(Rational number)
+        {
+            return number.ToSByte(null);
+        }
+
         public byte ToByte(IFormatProvider provider)
         {
             return Convert.ToByte(GetDouble());
+        }
+
+        public static explicit operator Byte(Rational number)
+        {
+            return number.ToByte(null);
         }
 
         public ushort ToUInt16(IFormatProvider provider)
@@ -216,19 +226,39 @@ namespace Calc
             return Convert.ToUInt16(GetDouble());
         }
 
+        public static explicit operator UInt16(Rational number)
+        {
+            return number.ToUInt16(null);
+        }
+
         public uint ToUInt32(IFormatProvider provider)
         {
             return Convert.ToUInt32(GetDouble());
+        }
+        
+        public static explicit operator UInt32(Rational number)
+        {
+            return number.ToUInt32(null);
         }
 
         public ulong ToUInt64(IFormatProvider provider)
         {
             return Convert.ToUInt64(GetDouble());
         }
+        
+        public static explicit operator UInt64(Rational number)
+        {
+            return number.ToUInt64(null);
+        }
 
         public float ToSingle(IFormatProvider provider)
         {
             return Convert.ToSingle(GetDouble());
+        }
+
+        public static explicit operator Single(Rational number)
+        {
+            return number.ToSingle(null);
         }
 
         public decimal ToDecimal(IFormatProvider provider)
@@ -244,6 +274,11 @@ namespace Calc
         public DateTime ToDateTime(IFormatProvider provider)
         {
             return Convert.ToDateTime(GetDouble());
+        }
+
+        public static explicit operator DateTime(Rational number)
+        {
+            return number.ToDateTime(null);
         }
 
         public object ToType(Type conversionType, IFormatProvider provider)
