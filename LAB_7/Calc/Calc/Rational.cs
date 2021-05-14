@@ -432,11 +432,23 @@ namespace Calc
             double fract = x - (int) x;
             string buffer = fract.ToString();
             long denumerator = 1;
-            int i = buffer.Length - 2;
-            while (i != 0)
+            int count = 0;
+            for (int i = 0; i < buffer.Length - 1; i++)
+            {
+                if (buffer[i] == '0')
+                {
+                    if (buffer[i + 1] == '0')
+                    {
+                        break;
+                    }
+                }
+                else count++;
+            }
+            
+            while (count != 0)
             {
                 denumerator *= 10;
-                i--;
+                count--;
             }
             long numerator = (long) x * denumerator + (long)(fract * denumerator);
             return new Rational(numerator, denumerator);

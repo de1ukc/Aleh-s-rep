@@ -62,9 +62,10 @@ namespace Calc
                 Console.WriteLine(e.Message);
             }
 
-            double x = 5.777;
-            test = 1 + (Rational)x;
+            double x = 55.420;
+            test = 14 + (Rational)x;
             Console.WriteLine(test.ToString("standart"));
+            Console.WriteLine(test.ToString("Decimal"));
 
         }
     }
