@@ -441,6 +441,7 @@ namespace Calc
                     {
                         break;
                     }
+                    else count++;
                 }
                 else count++;
             }
